@@ -17,6 +17,7 @@ To compile the C++ codes, run the following:
 **To run the GMM-CorrS**:
 
     export R_HOME=/usr/lib/R
+    
     ./bin/mcmc_multinomial_rd.x n c1 c2 q burnIn iter 1 1 Y_file M_file A_file C1_file C2_file beta_m.ini_file alpha_a.ini_file pi.ini_file Cov_file inv_D_file --no-save
 
 where
