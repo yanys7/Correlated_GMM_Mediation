@@ -236,7 +236,6 @@ class Variables
     my_samples.resize( 499, 3 * q + 10, 0.0 );
     //my_labels.resize( 1000, n_mixtures, 0.0 );
     my_probs.resize( 499, n_mixtures * q, 0.0 );
-    y_ppc.resize( 499, n, 0.0 );
 
     neighbors.resize(q);
     U.resize(q);
