@@ -14,7 +14,7 @@ To compile the C++ codes, run the following:
 
     make
     
-###### To run the GMM-CorrS:
+**To run the GMM-CorrS**:
 
     export R_HOME=/usr/lib/R
     ./bin/mcmc_multinomial_rd.x n c1 c2 q burnIn iter 1 1 Y_file M_file A_file C1_file C2_file beta_m.ini_file alpha_a.ini_file pi.ini_file Cov_file inv_D_file --no-save
@@ -60,7 +60,7 @@ One output file is 'probs_11.txt', which contains the posterior samples of (pi_1
 Another output file is 'results_11.txt', which contains the posterior samples of (beta_mj, alpha_aj, r_j) for each j-th mediator, stacked in order. r_j is the group membership of the j-th mediator.
 
 
-###### To run the GMM-Potts:
+**To run the GMM-Potts**:
 
     ./bin/mcmc_potts_rd.x n c1 c2 q burnIn iter 1 1 Y_file M_file A_file C1_file C2_file beta_m.ini_file alpha_a.ini_file pi.ini_file Cov_file theta_0_file theta_1_file neighborMatrix_file
 
