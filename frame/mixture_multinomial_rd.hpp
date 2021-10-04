@@ -382,7 +382,7 @@ class Variables
 
    };
 
-   void Iteration( size_t burnIn, size_t it )
+   void Iteration( size_t burnIn, size_t it, size_t niter )
    {
 
      /** Update res1, res2 */
@@ -881,7 +881,7 @@ class Variables
         
         count += 1;
 
-      if ( count >= 499 )
+      if ( count >= ((niter-burnIn) / 10 - 1) )
       {
         string my_samples_filename = string( "results_" ) + to_string( (int)q1 ) + to_string( (int)q2 ) + string( ".txt" );
         my_samples.WriteFile( my_samples_filename.data() );
@@ -1032,7 +1032,7 @@ void mcmc( hmlp::Data<T> &Y,
 
   for ( size_t it = 0; it < niter; it ++ )
   {
-    variables.Iteration( burnIn, it );
+    variables.Iteration( burnIn, it, niter );
   }
 
 };
